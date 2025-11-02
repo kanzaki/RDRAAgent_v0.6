@@ -1,9 +1,0 @@
-# 初期プロンプト
-https://www.softbank.jp/iphone/iphone-17-pro/?utm_source=gkt&utm_medium=cpc&utm_campaign=mmsbmols&utm_content=2_1_1_00622_32646&gad_source=1&gad_campaignid=22963049460&gbraid=0AAAAADnH14mBrpl1RyG7lsVBVQgFE-PVx&gclid=Cj0KCQjw8p7GBhCjARIsAEhghZ3IKUMYp-N9D7c6O1OSZkiOkUz3Dch1hy2cE7XKH8j6hpGgTpE3mzoaAnI8EALw_wcB 
-#このサイトを分析しこの会社が提供するサービスについて詳しく分析して下さい
-
-# 掘り下げ
-各サービスを個別に深く掘り下げ各サービスが行うことを洗い出してください
-
-# 掘り下げ
-掘り下げた各機能は何を行うものなのかをソフトバンクの立場で詳しく説明してください
