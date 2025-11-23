@@ -183,8 +183,9 @@ function executeOption(option) {
             break;
         case '12':
             if(checkAllFilesExistInFolder(rdraFiles, '1_RDRA')) {
-                console.log('ZeroOneデータをクリップボードにコピーする。');
+                console.log('ZeroOneデータをクリップボードにコピーします...');
                 makeZeroOneData();
+                waitForEnterThenNext();
             } else {
                 console.log('1_RDRAフォルダーにRDRA定義が生成されていません。');
                 waitForEnterThenNext();
@@ -310,6 +311,13 @@ function executeEachPhase() {
         executeLLMTerminal('パス「RDRA_Knowledge/0_ZeroOne指示.md」のファイルを読んで、Phase4とPhase5を実行してください。注意：このファイルはRDRA_Knowledge直下にあり、0_RDRAZeroOneフォルダ内ではありません');
         return;
     }
+    const phaseExist5 = checkAllFilesExistInFolder(rdraFiles, '1_RDRA');
+    if (phaseExist5) {
+        console.log('1_RDRAフォルダーにコピーされています。');
+    } else {
+        executeLLMTerminal('パス「RDRA_Knowledge/0_ZeroOne指示.md」のファイルを読んで、Phase5を実行してください。注意：このファイルはRDRA_Knowledge直下にあり、0_RDRAZeroOneフォルダ内ではありません');
+        return;
+    }
     waitForEnterThenNext();
 }
 /**
@@ -321,6 +329,7 @@ function executeAllPhase() {
     const phaseExist2 = checkAllFilesExistInFolder(phase2Files, '0_RDRAZeroOne/phase2');
     const phaseExist3 = checkAllFilesExistInFolder(phase3Files, '0_RDRAZeroOne/phase3');
     const phaseExist4 = checkAllFilesExistInFolder(phase4Files, '0_RDRAZeroOne/phase4');
+    const phaseExist5 = checkAllFilesExistInFolder(rdraFiles, '1_RDRA');
     
     // 存在しない最初のフェーズから実行
     if (!phaseExist1) {
@@ -334,10 +343,12 @@ function executeAllPhase() {
     } else if (!phaseExist4) {
         console.log('phase1, phase2, phase3は定義されています。');
         executeLLMTerminal('パス「RDRA_Knowledge/0_ZeroOne指示.md」のファイルを読んで、Phase4からPhase5までを実行してください。注意：このファイルはRDRA_Knowledge直下にあり、0_RDRAZeroOneフォルダ内ではありません');
+    } else if (!phaseExist5) {
+        console.log('phase1~phase4は定義されています。');
+        executeLLMTerminal('パス「RDRA_Knowledge/0_ZeroOne指示.md」のファイルを読んで、Phase5を実行してください。注意：このファイルはRDRA_Knowledge直下にあり、0_RDRAZeroOneフォルダ内ではありません');
     } else {
         console.log('すべてのフェーズが定義されています。');
     }
-    
     waitForEnterThenNext();
 }
 /**
@@ -384,7 +395,6 @@ function showRDRAGraph() {
  * ZeroOneデータをクリップボードにコピーする
  */
 function makeZeroOneData() {
-    console.log('ZeroOneデータをクリップボードにコピーします...');
     exec('node RDRA_Knowledge/helper_tools/makeZeroOneData.js', (error, stdout, stderr) => {
         if (error) {
             console.error(`エラー: ${error}`);
@@ -397,10 +407,10 @@ function makeZeroOneData() {
         if (stderr) {
             console.error(stderr);
         }
-        console.log('ZeroOneデータの処理が完了しました。');
-        console.log('データはクリップボードにコピーされました。スプレッドシートに貼り付けてください。');
-        promptUser();
-    });
+    })
+    console.log('ZeroOneデータの処理が完了しました。');
+    console.log('データはクリップボードにコピーされました。スプレッドシートに貼り付けてください。');
+    console.log('https://docs.google.com/spreadsheets/d/1h7J70l6DyXcuG0FKYqIpXXfdvsaqjdVFwc6jQXSh9fM/edit?gid=1240873646#gid=1240873646');
 }
 /**
  * 生成したファイルをRDRAフォルダーにコピーする

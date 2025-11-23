@@ -64,7 +64,7 @@ function integrateRDRAFiles() {
     }
     
     // fs.writeFileSync(outputFile, integratedContent, 'utf-8');
-    console.log(`統合ファイル ${outputFile} を作成しました`);
+    //console.log(`統合ファイル ${outputFile} を作成しました`);
     
     // クリップボードにコピー
     copyToClipboard(integratedContent);
@@ -101,8 +101,6 @@ function copyToClipboard(content) {
                     clipProcess.stdin.write(content, 'utf8');
                     clipProcess.stdin.end();
                 }
-            } else {
-                console.log('クリップボードにコピーしました');
             }
         });
     } else if (process.platform === 'darwin') {

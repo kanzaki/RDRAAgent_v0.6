@@ -42,16 +42,16 @@ https://ui.shadcn.com/docs/components
 
 ## 「RDRA_Knowledge/1_RDRA」フォルダー
 要件定義手法の「RDRA」の考え方をまとめたファイルを含む
-## 「RDRA_Knowledge/1_RDRA」フォルダー
 - RDRA.md:RDRAの考え方をまとめたファイル
 - RDRASheet.md:RDRA定義をSpreadsheetで行う各シートのフォーマットの説明、各シート内のモデルは「RDRA.md」で定義したモデルに対応する
-- RDRAGraph.md:RDRAGraphのデータ構造「関連データ」の説明
+- RDRAGraph.md:RDRAGraphのデータ構造「関連データ.txt」の説明
 ## 「RDRA_Knowledge/2_RDRASpec」フォルダー
 - 21_data.md:RDRA定義から論理データを生成する方法を説明したファイル
 - 22_ui.md:ユースケースと画面の関係から画面のUI定義を生成する方法を記述したファイル
 - 23_business_rule.md:ビジネスルールモジュールを定義する方法を記述したファイル
 - specValidation.md:仕様の妥当性検証方法を記述したファイル
-## 「RDRA_Knowledge/2_RDRASpec/Validation」フォルダー
+- specScenarioStory.md:仕様のストーリー作成方法を記述したファイル
+## 「2_RDRASpec/Validation」フォルダー
 論理データとprototypeの生成物が保持される
 
 ## 「helper_tools」フォルダー

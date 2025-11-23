@@ -12,6 +12,8 @@ RDRAAgentは、RDRA（Relationship Driven Requirement Analysis）手法を用い
 Zipでダウンロードする：
 「Download Zip」を選択する
 
+### 部分的にJavaScriptを使っているので、Node.jsのインストールが必要です
+
 ### 方法2: リポジトリをクローンして直接使用（開発・カスタマイズ向け）
 
 開発やカスタマイズを行う場合は、リポジトリを直接クローンします：
