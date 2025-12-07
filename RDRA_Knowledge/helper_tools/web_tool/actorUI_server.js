@@ -22,8 +22,6 @@ const mimeTypes = {
 };
 
 const server = http.createServer((req, res) => {
-    console.log(`リクエスト: ${req.url}`);
-
     // シャットダウンエンドポイント
     if (req.url === '/shutdown') {
         res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });

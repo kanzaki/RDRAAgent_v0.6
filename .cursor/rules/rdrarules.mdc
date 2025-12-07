@@ -31,7 +31,7 @@ https://ui.shadcn.com/docs/components
 - Phase1-Phase4:フェーズ毎の成果物を保持するフォルダー
 ## 「1_RDRA」フォルダー
 - 生成物を保持するフォルダー
-- フェーズ３とフェーズ４の生成物を保持するフォルダー
+- Phase3とPhase4の生成物をコピーして保持するフォルダー
 - 関連データ.txt:RDRAGraphのためのデータ
 ## 「2_RDRASpec」フォルダー
 - 生成物を保持するフォルダー

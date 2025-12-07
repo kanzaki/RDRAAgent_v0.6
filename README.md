@@ -66,6 +66,13 @@ RDRAAgent0.6/
 - **Node.js**: バージョン18以上推奨
 - **Model**:Claude code(default)
 
+## 要件定義方法
+
+### 実行方法は３通りで実現できます
+- メニュー起動：nodeでメニューを実行する方法
+- Cursor: / Command：Cursorの「/」今度で実行
+- Claude Code: / Command：Cursorの「/」今度で実行
+
 ## メニュー起動
 
 ```bash
@@ -117,7 +124,7 @@ node menu.js
 - `妥当性検証環境.csv` を使用してRDRA定義を検証
 - 要件の整合性や漏れをチェック
 
-### ■RDRASpec（仕様作成）
+### ■RDRASpec（非システムアーキテクチャ依存の仕様作成）
 
 **21. 仕様の作成**
 - 論理データ構造、画面定義、ビジネスルールを生成
@@ -142,7 +149,7 @@ node menu.js
   2. `actorUI_server.js` でサーバー起動（ポート3001）
   3. ブラウザで http://localhost:3001/ を開く
 
-### ■全般
+### ■全般（maintenance）
 
 **0. メニュー終了**
 - プログラムを終了

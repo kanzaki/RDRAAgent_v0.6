@@ -2681,7 +2681,7 @@ var require_RdraSheet2Graph_res = __commonJS({
           if (match2 === "") {
             return;
           }
-          if (match$12.length === 0) {
+          if (!match$12 || match$12.length === 0) {
             return;
           }
           var sttGary = ifString2Arrayy(match$12);
@@ -2714,7 +2714,7 @@ var require_RdraSheet2Graph_res = __commonJS({
           if (match2 === "") {
             return;
           }
-          if (match$12.length === 0) {
+          if (!match$12 || match$12.length === 0) {
             return;
           }
           var vriAry = ifString2Arrayy(match$12);

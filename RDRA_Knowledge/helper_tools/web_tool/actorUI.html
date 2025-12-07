@@ -131,15 +131,9 @@
 
         .screen-card-title {
             font-size: 14px;
-            font-weight: normal;
+            font-weight: bold;
             margin-bottom: 5px;
             color: #333;
-        }
-
-        .screen-card-subtitle {
-            font-size: 12px;
-            font-weight: bold;
-            color: #666;
         }
 
         .screen-card-field {
@@ -547,15 +541,11 @@
 
             const title = document.createElement('div');
             title.className = 'screen-card-title';
-            title.textContent = `${item.business}\n${item.buc}`;
+            title.textContent = item.screen.screen_name;;
             title.style.whiteSpace = 'pre-line';
 
-            const subtitle = document.createElement('div');
-            subtitle.className = 'screen-card-subtitle';
-            subtitle.textContent = item.screen.screen_name;
-
             card.appendChild(title);
-            card.appendChild(subtitle);
+            // card.appendChild(subtitle);
 
             // フィールドを3つまで表示
             const fields = item.screen.fields.slice(0, 3);

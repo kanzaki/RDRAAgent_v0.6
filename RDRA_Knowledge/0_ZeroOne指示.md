@@ -23,7 +23,7 @@
 ## Phase3
 - Phase3で作成するファイルは「0_RDRAZeroOne/phase3」フォルダーの中に出力する
 - フェーズ１、フェーズ２の出力結果を元に以下の指示に従ってください
-- Phase3の実行を指示された場合は「RDRA_Knowledge/0_RDRAZeroOne/RDRAZeroOne.md」のフェー- ズ３を実行する
+- Phase3の実行を指示された場合は「RDRA_Knowledge/0_RDRAZeroOne/RDRAZeroOne.md」のフェーズ３を実行する
 - Phase3内のファイル作成を指示された場合は該当ファイルの作成だけを行う
 - 実行後出力したファイルの内容を確認し、人が行うことを表示する
 
