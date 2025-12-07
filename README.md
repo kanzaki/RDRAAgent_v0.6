@@ -68,10 +68,9 @@ RDRAAgent0.6/
 
 ## 要件定義方法
 
-### 実行方法は３通りで実現できます
+### 実行方法は２通りで実現できます
 - メニュー起動：nodeでメニューを実行する方法
-- Cursor: / Command：Cursorの「/」今度で実行
-- Claude Code: / Command：Cursorの「/」今度で実行
+- Cursor: / Command：Cursorの「/」AIで生成する処理をコマンドで実行
 
 ## メニュー起動
 
